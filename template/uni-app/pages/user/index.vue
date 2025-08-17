@@ -378,7 +378,7 @@ export default {
 			member_style: 0,
 			my_banner_status: 0,
 			is_diy: uni.getStorageSync('is_diy'),
-			copyRightPic: '/static/images/support.png' //版权图片
+			copyRightPic: '' //版权图片
 		};
 	},
 	onLoad(option) {

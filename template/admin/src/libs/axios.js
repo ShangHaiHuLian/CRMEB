@@ -27,7 +27,7 @@ const addErrorLog = (errorInfo) => {
 
 class HttpRequest {
   constructor(baseUrl = baseURL) {
-    this.baseUrl = 'http://admin.crmeb.net/adminapi';
+    this.baseUrl = baseUrl;
     this.queue = {};
   }
   getInsideConfig() {
