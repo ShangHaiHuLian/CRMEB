@@ -53,6 +53,9 @@ services:
       TZ: Asia/Shanghai
     ports:
       - 9000:9000
+      - 40001:40001  # 后台通知WebSocket端口
+      - 40002:40002  # 客服聊天WebSocket端口
+      - 40003:40003  # 内部通讯端口
       - 20002:20002
       - 20003:20003
     tmpfs: /var/temp

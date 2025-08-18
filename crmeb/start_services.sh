@@ -15,9 +15,9 @@ php think timer start --d
 echo "启动消息队列..."
 su -c "php think queue:work --queue event" -s /bin/sh www-data &
 
-# 启动长连接服务（在后台运行）
+# 启动长连接服务（以www-data用户在后台运行）
 echo "启动长连接服务..."
-php think workerman start &
+su -c "php think workerman start" -s /bin/sh www-data &
 
 # 启动PHP-FPM主进程（必须在前台运行）
 echo "启动PHP-FPM..."
