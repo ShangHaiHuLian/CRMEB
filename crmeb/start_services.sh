@@ -11,9 +11,9 @@ chmod -R 777 /var/www/runtime
 echo "启动定时任务..."
 php think timer start --d
 
-# 启动消息队列（在后台运行）
+# 启动消息队列（以www-data用户在后台运行）
 echo "启动消息队列..."
-php think queue:work --queue event &
+su -c "php think queue:work --queue event" -s /bin/sh www-data &
 
 # 启动长连接服务（在后台运行）
 echo "启动长连接服务..."

@@ -47,7 +47,7 @@ services:
     container_name: crmeb_php
     build:
       context: ./php
-      dockerfile: Dockerfile   # 使用下面改好的 Dockerfile
+      dockerfile: Dockerfile
     restart: always
     environment:
       TZ: Asia/Shanghai
@@ -58,13 +58,14 @@ services:
     tmpfs: /var/temp
     working_dir: /var/www
     volumes:
+      # 修改挂载配置，只保留一个主要挂载点
       - ../crmeb:/var/www
       - ../crmeb/runtime:/var/www/runtime
       - ./php/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
     networks:
       app_net:
         ipv4_address: 192.168.10.90
-    # 添加下面这行来自动执行脚本
+    # 保留命令行配置
     command: sh -c 'chmod +x /var/www/start_services.sh && /var/www/start_services.sh && php-fpm'
 
   # Nginx 容器
