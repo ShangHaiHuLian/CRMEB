@@ -64,6 +64,8 @@ services:
     networks:
       app_net:
         ipv4_address: 192.168.10.90
+    # 添加下面这行来自动执行脚本
+    command: sh -c 'chmod +x /var/www/start_services.sh && /var/www/start_services.sh && php-fpm'
 
   # Nginx 容器
   nginx:

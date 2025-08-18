@@ -2,13 +2,13 @@ module.exports = {
 	// 小程序 / APP请求配置
 	// #ifdef MP || APP-PLUS
 	// 请求域名 格式： https://您的域名
-	HTTP_REQUEST_URL: `http://localhost:8011`,
+	HTTP_REQUEST_URL: `https://shop.hulian86.cn`,
 	// #endif
 
 	// H5请求配置
 	// #ifdef H5
-	// 本地开发环境指向Docker容器中的后端服务
-	HTTP_REQUEST_URL: "http://localhost:8011",
+	// H5接口是浏览器地址，非单独部署不用修改
+	HTTP_REQUEST_URL: window.location.protocol + "//" + window.location.host,
 	// #endif 
 
 	// 以下配置在不做二开的前提下,不需要做任何的修改

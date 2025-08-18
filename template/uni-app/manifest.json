@@ -1,7 +1,7 @@
 {
-    "name" : "CRMEB标准版",
-    "appid" : "__UNI__A3F1ED4",
-    "description" : "CRMEB标准版",
+    "name" : "虎链商城",
+    "appid" : "__UNI__08A2125",
+    "description" : "虎链商城",
     "versionName" : "5.6.2",
     "versionCode" : 562,
     "transformPx" : false,
@@ -182,7 +182,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx3b82801238ca1b57",
+        "appid" : "wxa9cf3390465c36f1",
         "setting" : {
             "urlCheck" : false,
             "minified" : true,

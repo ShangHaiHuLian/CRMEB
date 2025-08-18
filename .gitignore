@@ -1,26 +1,119 @@
-/.git
-/.idea
+# Git忽略文件 - CRMEB项目
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE和编辑器
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+.phpstorm.meta.php
+.phpunit.result.cache
+
+# PHP相关
+/vendor/
+/crmeb/vendor/
+composer.phar
 *.log
-*.DS_Store
-/crmeb/runtime/cache
-/crmeb/runtime/log
-/crmeb/runtime/session
-/crmeb/runtime/temp
-/crmeb/public/install.lock
-/crmeb/public/uploads
+*.cache
+.env
+.env.local
+.env.production
+.env.staging
+
+# ThinkPHP运行时文件
+/crmeb/runtime/cache/
+/crmeb/runtime/log/
+/crmeb/runtime/session/
+/crmeb/runtime/temp/
 /crmeb/runtime/timer.pid
 /crmeb/runtime/workerman.pid
+/crmeb/runtime/.timer
+/crmeb/runtime/.queue
+/crmeb/runtime/*.log
+
+# 上传文件和安装锁
+/crmeb/public/install.lock
+/crmeb/public/uploads/
+/crmeb/backup/
+/crmeb/temp/
+
+# 配置文件（敏感信息）
+/crmeb/config/database.php
+/crmeb/config/redis.php
+/crmeb/config/queue.php
+/crmeb/.constant
+
+# Docker相关
 /docker-compose/mysql/data/
 /docker-compose/mysql/log/
 /docker-compose/nginx/log/
-/template/admin/dist/
-/template/admin/.idea/
-/template/admin/node_modules/
-/template/uni-app/node_modules/
-/template/uni-app/unpackage/
-/template/uni-app/.hbuilderx/
-/crmeb/.idea/
+/docker-compose/redis/data/
 /docker-compose/MacArm/mysql/data/
 /docker-compose/MacArm/mysql/log/
 /docker-compose/linux/mysql/data/
 /docker-compose/linux/mysql/log/
+/docker-compose/window/mysql/data/
+/docker-compose/window/mysql/log/
+
+# 前端管理后台 (Vue.js)
+/template/admin/dist/
+/template/admin/node_modules/
+/template/admin/.idea/
+/template/admin/coverage/
+/template/admin/.nyc_output/
+/template/admin/.eslintcache
+/template/admin/.cache/
+/template/admin/.parcel-cache/
+
+# uni-app移动端
+/template/uni-app/node_modules/
+/template/uni-app/unpackage/
+/template/uni-app/.hbuilderx/
+/template/uni-app/.vscode/
+/template/uni-app/dist/
+/template/uni-app/build/
+
+# 依赖锁定文件（可选，根据需要决定是否忽略）
+# /template/admin/package-lock.json
+# /template/uni-app/package-lock.json
+
+# 日志文件
+*.log
+logs/
+log/
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.temp
+
+# 缓存文件
+cache/
+.cache/
+*.cache
+
+# 测试覆盖率
+coverage/
+.nyc_output/
+htmlcov/
+
+# 构建输出
+build/
+dist/
+out/
+
+# 本地配置文件
+*.local
+local.*

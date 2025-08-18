@@ -5,8 +5,8 @@
     </div>
     <div class="ivu-global-footer-copyright" v-if="copyright">{{ copyright }}</div>
     <div class="ivu-global-footer-copyright" v-else>
-      Copyright © 2014-2025
-      <a href="https://www.crmeb.com" target="_blank">{{ version }}</a>
+      Copyright © 2021-2025
+      <a href="https://www.hulian86.cn" target="_blank">{{ version }}</a>
     </div>
   </div>
 </template>
@@ -22,17 +22,17 @@ export default {
         {
           title: '官网',
           key: '官网',
-          href: 'https://www.crmeb.com',
+          href: 'https://www.hulian86.cn',
         },
         {
           title: '社区',
           key: '社区',
-          href: 'http://q.crmeb.com',
+          href: 'https://www.hulian86.cn',
         },
         {
           title: '文档',
           key: '文档',
-          href: 'http://doc.crmeb.com',
+          href: 'https://www.hulian86.cn',
         },
       ],
       copyright: '',

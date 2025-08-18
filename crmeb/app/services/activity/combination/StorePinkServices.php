@@ -413,7 +413,7 @@ class StorePinkServices extends BaseServices
         //拼团卡密和优惠券商品，成团后发放
         $orderInfos = $orderService->getColumn([['order_id', 'in', $order_ids]], '*', 'order_id');
         foreach ($orderInfos as $orderInfo) {
-            if (in_array($orderInfo['virtual_type'], [1, 2])) {
+            if ($orderInfo['virtual_type'] > 0) {
                 $orderInfo['cart_id'] = json_decode($orderInfo['cart_id'], true);
                 /** @var StoreOrderDeliveryServices $orderDeliveryServices */
                 $orderDeliveryServices = app()->make(StoreOrderDeliveryServices::class);

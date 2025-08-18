@@ -458,7 +458,8 @@ export default {
 					let data = res.data;
 					uni.setStorageSync('wechatStatus', data.wechat_status);
 					if (!data.copyrightContext && !data.copyrightImage) {
-						data.copyrightImage = '/static/images/support.png';
+						// 个人中心版权
+						//data.copyrightImage = '/static/images/support.png';
 					}
 					uni.setStorageSync('copyNameInfo', data.copyrightContext);
 					uni.setStorageSync('copyImageInfo', data.copyrightImage);

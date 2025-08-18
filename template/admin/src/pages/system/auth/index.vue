@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-card :bordered="false" shadow="never" class="ivu-mt">
+    <!-- <el-card :bordered="false" shadow="never" class="ivu-mt">
       <div class="head acea-row row-between-wrapper">商业授权</div>
       <el-table ref="table" :data="licensingTable" empty-text="暂无数据">
         <el-table-column label="产品证书编号" minWidth="180">
@@ -16,8 +16,8 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
-    <el-card v-if="!copyright && status == 1" :bordered="false" shadow="never" class="ivu-mt mt16">
+    </el-card> -->
+    <!-- <el-card v-if="!copyright && status == 1" :bordered="false" shadow="never" class="ivu-mt mt16">
       <div class="head acea-row row-between-wrapper">去版权服务</div>
       <el-table ref="table" :data="copyrightList" empty-text="暂无数据">
         <el-table-column label="授权服务" minWidth="180">
@@ -29,7 +29,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </el-card> -->
     <el-card v-if="copyright" :bordered="false" shadow="never" class="ivu-mt mt16">
       <div class="head acea-row row-between-wrapper">自定义版权信息</div>
       <el-table ref="table" :data="copyrightTableData" empty-text="暂无数据">
@@ -310,7 +310,7 @@ export default {
         });
     },
     toCrmeb() {
-      window.open('http://www.crmeb.com');
+      window.open('http://wwwhulian86.cn');
     },
     getProduct() {
       crmebProduct({ type: 'copyright' })
