@@ -9,6 +9,7 @@ module.exports = {
 	// #ifdef H5
 	// H5接口是浏览器地址，非单独部署不用修改
 	HTTP_REQUEST_URL: window.location.protocol + "//" + window.location.host,
+	// HTTP_REQUEST_URL: `https://shop.hulian86.cn`,
 	// #endif 
 
 	// 以下配置在不做二开的前提下,不需要做任何的修改
